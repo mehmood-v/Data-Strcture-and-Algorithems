@@ -23,20 +23,28 @@
 export const charCount = (str: string) => {
   const result: any = {};
 
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i].toLocaleLowerCase();
+  for (let char of str) {
+    if (isAlphaNumeric(char)) {
+      char = char.toLocaleLowerCase();
 
-    console.log(++result[char]);
-    result[char] = ++result[char] || 1;
-
-    // if (result[char]) {
-    //   result[char] = result[char] + 1;
-    // } else {
-    //   result[char] = result[char] = 1;
-    // }
+      result[char] = ++result[char] || 1;
+    }
   }
 
   console.log(result);
 };
+
+function isAlphaNumeric(char: string) {
+  const code = char.charCodeAt(0);
+
+  if (
+    !(code > 47 && code < 58) &&
+    !(code > 64 && code < 91) &&
+    !(code > 96 && code < 123)
+  ) {
+    return false;
+  }
+  return true;
+}
 
 // charCount('The Quick brown fox jumps over the lazy dog');
