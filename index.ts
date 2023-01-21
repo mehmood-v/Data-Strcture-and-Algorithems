@@ -1,6 +1,3 @@
-// Import stylesheets
-import './style.css';
+import { charCount } from './Problems/FindCharactersCount';
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+charCount('The Quick brown fox jumps over the lazy dog');
