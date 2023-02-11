@@ -1,4 +1,4 @@
-const same = (array1: number[], array2: number[]) => {
+const FrequencyCounterNaiveSolution = (array1: number[], array2: number[]) => {
   if (array1.length !== array2.length) {
     return false;
   }
