@@ -7,19 +7,20 @@
 
 //console.log(AnagramSolution('anagram', 'nagaram'));
 
-const maxSum = (arr: number[], k = 4) => {
-  let tempSum = 0;
+function maxSubarraySum(arr: number[], num: number) {
   let maxSum = 0;
-  for (let i = 0; i <= k; i++) {
-    tempSum += arr[i];
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
   }
-
-  for (let i = k; i < arr.length; i++) {
-    tempSum = tempSum - arr[i - k] + arr[i];
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
     maxSum = Math.max(maxSum, tempSum);
   }
   return maxSum;
-};
+}
 
-console.log(maxSum([1, 4, 6, 4, 7, 9, 5, 6, 4]));
-export default maxSum;
+maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3);
+export default maxSubarraySum;
