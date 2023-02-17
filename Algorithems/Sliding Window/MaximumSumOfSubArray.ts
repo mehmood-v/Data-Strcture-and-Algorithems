@@ -15,13 +15,17 @@ const maxSum = (array: number[], num = 4) => {
   let maxSum = 0;
 
   for (let i = 0; i < num; i++) {
-    tempSum += array[i];
+    maxSum += array[i];
   }
 
-  // for (let i = 0; i < array.length; i++) {}
+  tempSum = maxSum;
 
-  console.log(tempSum);
+  for (let i = num; i < array.length; i++) {
+    tempSum = tempSum - array[i - num] + array[i];
+    maxSum = Math.max(tempSum, maxSum);
+  }
+
+  console.log(maxSum);
 };
 
-maxSum([1, 4, 6, 4, 7, 9, 5, 6, 4], 4);
 export default maxSum;
