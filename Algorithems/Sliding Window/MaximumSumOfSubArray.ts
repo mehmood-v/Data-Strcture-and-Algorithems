@@ -25,7 +25,7 @@ const maxSum = (array: number[], num = 4) => {
     maxSum = Math.max(tempSum, maxSum);
   }
 
-  console.log(maxSum);
+  return maxSum;
 };
 
 export default maxSum;
