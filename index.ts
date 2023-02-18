@@ -17,9 +17,11 @@ function averagePair(array: number[], avg: number) {
   let left = 0;
   let right = array.length - 1;
 
-  // while (left < right) {
-  //   console.log(array[left]);
-  // }
+  while (left < right) {
+    console.log(array[left]);
+
+    left++;
+  }
 }
 
 averagePair([1, 2, 3], 2.5);
