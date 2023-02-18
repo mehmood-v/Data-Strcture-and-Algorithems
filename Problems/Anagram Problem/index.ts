@@ -1,36 +1,28 @@
-// check both arrays length if not same return false
+// Check the anagram problem
+// Map over the first string and count each character
+// Map over the second string and check if every character exist in the counts object
 
-//  map over the first string and count each character and save in an object as key value
+//return true if all characters exist in counts else return false
 
-// map over the second string and check every character if it exist the object
-
-// if exist decrease count and if doesn't exist return false
-
-export default function validAnagram(first: string, second: string) {
-  if (first.length !== second.length) {
-    return false;
+export default function ValidAnagram(str1: string, str2: string) {
+  if (str1.length !== str2.length) {
+    return;
   }
 
-  const lookup = {};
+  let counts = {};
+  let result = true;
 
-  for (let i = 0; i < first.length; i++) {
-    const letter = first[i];
-
-    lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
+  for (let char of str1) {
+    counts[char] = counts[char] ? (counts[char] += 1) : 1;
   }
 
-  for (let i = 0; i < second.length; i++) {
-    let letter = second[i];
-
-    if (!lookup[letter]) {
-      return false;
+  for (let char of str2) {
+    if (!counts[char]) {
+      result = false;
     }
-
-    lookup[letter] -= 1;
   }
 
-  return true;
+  console.log(result);
 }
 
-// {a: 0, n: 0, g: 0, r: 0, m: 0,s:1}
-validAnagram('anagrams', 'nagaramm');
+anoGram('anagrams', 'nagaramm');
