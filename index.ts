@@ -14,13 +14,18 @@
 // averagePair([],4) // false
 
 function averagePair(array: number[], avg: number) {
-  let left = 0;
-  let next = 1;
-
-  while (next <= array.length - 1) {
-    left++;
-    next++;
+  let start = 0;
+  let end = array.length;
+  let result = false;
+  while (start < end) {
+    if ((array[start] + array[end]) / 2 == avg) {
+      result = true;
+      return result;
+    } else if ((array[start] + array[end]) / 2 < avg) start++;
+    else end--;
   }
+
+  return result;
 }
 
-averagePair([1, 2, 3], 2.5);
+console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8));
