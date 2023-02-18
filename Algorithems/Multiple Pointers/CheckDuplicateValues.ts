@@ -29,3 +29,6 @@ export default function areThereDuplicates(...args: string[] | number[]) {
 // areThereDuplicates(1, 2, 3);
 
 console.log(areThereDuplicates('a', 'b', 'c', 'u'));
+
+// Linear Solution
+// return new Set(args).size !== arguments.length;

@@ -1,19 +1,12 @@
-// Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in.  You can solve this using the frequency counter pattern OR the multiple pointers pattern.
+const newSetWithAddMethod = new Set();
+newSetWithAddMethod.add('1');
+newSetWithAddMethod.add('2');
+newSetWithAddMethod.add('3');
 
-// Examples:
+// newSetWithAddMethod.forEach((val) => console.log(val));
 
-//Input  areThereDuplicates(1, 2, 3)
+const newSetWithArray = new Set([1, 2, 3, 4, 5]);
 
-// Output: false
+newSetWithArray.forEach((val) => console.log(val));
 
-// areThereDuplicates(1, 2, 3)
-// areThereDuplicates(1, 2, 2) // true
-// areThereDuplicates('a', 'b', 'c', 'a') // true
-
-export default function areThereDuplicates(...args) {
-  return new Set(args).size !== arguments.length;
-}
-
-// areThereDuplicates(1, 2, 3);
-
-console.log(areThereDuplicates('a', 'b', 'c', 'a'));
+newSetWithArray.delete(1);
