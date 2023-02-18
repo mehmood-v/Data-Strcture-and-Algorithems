@@ -15,17 +15,13 @@ export default function areThereDuplicates(...args: string[] | number[]) {
   let right = args.length - 1;
   let result = false;
 
-  while (left < right) {
-    console.log(left);
-    console.log(right);
-    left++;
-    // if (args[left] == args[right]) {
-    //   result = true;
-    // } else if (args[left] !== args[right]) {
-    //   right--;
-    // } else {
-    //   left++;
-    // }
+  while (left <= right) {
+    if (args[left] == args[right]) {
+      result = true;
+    } else if (args[left] !== args[right]) {
+      left++;
+      right--;
+    }
   }
 
   console.log(result);
