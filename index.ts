@@ -18,13 +18,14 @@ export default function areThereDuplicates(...args: string[] | number[]) {
   while (left < right) {
     console.log(left);
     console.log(right);
-    if (args[left] == args[right]) {
-      result = true;
-    } else if (args[left] !== args[right]) {
-      right--;
-    } else {
-      left++;
-    }
+    left++;
+    // if (args[left] == args[right]) {
+    //   result = true;
+    // } else if (args[left] !== args[right]) {
+    //   right--;
+    // } else {
+    //   left++;
+    // }
   }
 
   console.log(result);
