@@ -13,22 +13,23 @@
 export default function areThereDuplicates(...args: string[] | number[]) {
   let left = 0;
   let right = args.length - 1;
-  let result = true;
+  let result = false;
 
   while (left < right) {
-    console.log(args[left]);
-    console.log(args[right]);
+    console.log(left);
+    console.log(right);
     if (args[left] == args[right]) {
-      result = false;
+      result = true;
+    } else if (args[left] == args[right]) {
+      right--;
     } else {
       left++;
-      right--;
     }
   }
 
   console.log(result);
 }
 
-areThereDuplicates(1, 2, 3);
+// areThereDuplicates(1, 2, 3);
 
 areThereDuplicates(1, 2, 2);
