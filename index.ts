@@ -20,7 +20,7 @@ export default function areThereDuplicates(...args: string[] | number[]) {
     console.log(right);
     if (args[left] == args[right]) {
       result = true;
-    } else if (args[left] == args[right]) {
+    } else if (args[left] !== args[right]) {
       right--;
     } else {
       left++;
