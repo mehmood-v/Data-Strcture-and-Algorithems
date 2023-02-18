@@ -15,12 +15,12 @@
 
 function averagePair(array: number[], avg: number) {
   let left = 0;
-  let right = array.length - 1;
+  let next = 1;
 
-  while (left < right) {
+  while (next < array.length - 1) {
     console.log(array[left]);
 
-    left++;
+    next++;
   }
 }
 
