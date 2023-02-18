@@ -18,10 +18,9 @@ export default function areThereDuplicates(...args: string[] | number[]) {
   while (left <= right) {
     if (args[left] == args[right]) {
       result = true;
-    } else if (args[left] !== args[right]) {
-      left++;
-      right--;
     }
+    left++;
+    right--;
   }
 
   console.log(result);
