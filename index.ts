@@ -16,11 +16,13 @@ export default function areThereDuplicates(...args: string[] | number[]) {
   let result = true;
 
   while (left < right) {
+    console.log(args[left]);
+    console.log(args[right]);
     if (args[left] == args[right]) {
       result = false;
     } else {
-      ++left;
-      --right;
+      left++;
+      right--;
     }
   }
 
@@ -28,3 +30,5 @@ export default function areThereDuplicates(...args: string[] | number[]) {
 }
 
 areThereDuplicates(1, 2, 3);
+
+areThereDuplicates(1, 2, 2);
