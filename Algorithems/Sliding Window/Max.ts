@@ -14,19 +14,13 @@
 
 // Space Complexity - O(1)
 
-function maxSubarraySum1(array: number[], num: number) {
-  let tempSum = 0;
-  let maxSum = 0;
+// function maxSubarraySum(array: number[], num: number) {
+//   for (let i = 0; i <= array.length; i++) {
+//     for (let j = i + 1; j <= array.length; j++) {
+//       console.log(i);
+//       console.log(j);
+//     }
+//   }
+// }
 
-  for (let i = 0; i < num; i++) {
-    tempSum += array[i];
-  }
-
-  maxSum = tempSum;
-  for (let i = num; i < array.length - 1; i++) {
-    tempSum = tempSum - array[num - i] + array[num];
-  }
-  console.log(tempSum);
-}
-
-maxSubarraySum1([1, 4, 2, 10, 23, 3, 1, 0, 20], 3);
+// maxSubarraySum([1, 4, 2, 10, 23, 3, 1, 0, 20], 3);
