@@ -23,10 +23,11 @@ function maxSubarraySum1(array: number[], num: number) {
   }
 
   maxSum = tempSum;
-  for (let i = num; i < array.length - 1; i++) {
+  for (let i = num; i < array.length; i++) {
     tempSum = tempSum - array[num - i] + array[num];
+    maxSum = Math.max(tempSum, maxSum);
   }
-  console.log(tempSum);
+  return maxSum;
 }
 
-maxSubarraySum1([1, 4, 2, 10, 23, 3, 1, 0, 20], 3);
+console.log(maxSubarraySum1([1, 4, 2, 10, 23, 3, 1, 0, 20], 3));
