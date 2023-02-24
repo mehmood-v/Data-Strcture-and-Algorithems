@@ -25,4 +25,4 @@ export default function ValidAnagram(str1: string, str2: string) {
   console.log(result);
 }
 
-anoGram('anagrams', 'nagaramm');
+ValidAnagram('anagrams', 'nagaramm');
