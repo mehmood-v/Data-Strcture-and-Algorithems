@@ -7,7 +7,7 @@ function recursiveRange(num) {
     return 1;
   }
   console.log(num);
-  return num + recursiveRange(num - 1);
+  // return num + recursiveRange(num - 1);
 }
 
 console.log(recursiveRange(6));
