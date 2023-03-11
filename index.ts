@@ -1,3 +1,3 @@
 let a = 'jklhlkjhlkjhlk';
 
-console.log(a.slice(2));
+console.log(a.slice(-1));
