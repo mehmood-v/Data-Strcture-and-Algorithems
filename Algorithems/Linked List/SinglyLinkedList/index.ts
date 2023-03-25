@@ -111,5 +111,12 @@ class SinglyLinkedList {
     }
 
     if (index === 0) return this.unShift(value);
+    const newNode = new ListNode(value);
+    const pre = this.get(index - 1);
+    let temp = pre.next;
+    pre.next = newNode;
+    newNode.next = temp;
+    this.length++;
+    return true;
   }
 }
