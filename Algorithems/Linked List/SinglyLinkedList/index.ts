@@ -100,4 +100,14 @@ class SinglyLinkedList {
 
     return false;
   }
+
+  insert(index, value) {
+    if (index < 0 || index > this.length) {
+      return false;
+    }
+
+    if (index === this.length) {
+      return this.push(value);
+    }
+  }
 }
