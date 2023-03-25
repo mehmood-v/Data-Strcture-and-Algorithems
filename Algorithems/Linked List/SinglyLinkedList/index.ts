@@ -109,5 +109,7 @@ class SinglyLinkedList {
     if (index === this.length) {
       return this.push(value);
     }
+
+    if (index === 0) return this.unShift(value);
   }
 }
